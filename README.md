@@ -14,6 +14,7 @@ repo is organized.
 | Blueprint | Shape | Status |
 |---|---|---|
 | [simple-hardware-controller-service](blueprints/simple-hardware-controller-service/) | A headless, cross-platform service that owns a fleet of *simple* hardware, is the honest source of truth for its state, and exposes it through pluggable northbound (protocol) and southbound (transport) edges. | **DRAFT** — first blueprint; being proven against a BT light meter. Extracted from [LiteController](../LiteController/). |
+| [debug-channel](blueprints/debug-channel/) | A break-glass, **root-privileged** diagnostic surface a product exposes when the normal interface can't explain a fault — a separate, discoverable surface that supersets the control contract (observe internals/wire/logs + root-only force/inject verbs + audited secret reveal). Off by default; two dependent gates (local→network). Shape for the [Debugging Doctrine](../design-doctrine/debugging-doctrine.md). | **DRAFT** — hypothesis; intended first proving instance is [LiteController](../LiteController/) `litecontrollerd`. |
 
 ## How this repo is organized
 
